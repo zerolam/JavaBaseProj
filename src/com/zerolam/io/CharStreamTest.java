@@ -9,8 +9,8 @@ import java.io.OutputStreamWriter;
 import java.util.Calendar;
 
 /**
- * å­—ç¬¦æµ 
- * å­—ç¬¦æµåªèƒ½å¤„ç†å­—ç¬¦æ•°æ®ï¼Œåªè¦æ˜¯å¤„ç†çº¯æ–‡æœ¬æ•°æ®ï¼Œå°±è¦ä¼˜å…ˆè€ƒè™‘ä½¿ç”¨å­—ç¬¦æµï¼Œé™¤æ­¤ä¹‹å¤–éƒ½ç”¨å­—èŠ‚æµ
+ * ×Ö·ûÁ÷ 
+ * ×Ö·ûÁ÷Ö»ÄÜ´¦Àí×Ö·ûÊı¾İ£¬Ö»ÒªÊÇ´¦Àí´¿ÎÄ±¾Êı¾İ£¬¾ÍÒªÓÅÏÈ¿¼ÂÇÊ¹ÓÃ×Ö·ûÁ÷£¬³ı´ËÖ®Íâ¶¼ÓÃ×Ö½ÚÁ÷
  * 
  * @author Administrator
  *
@@ -18,7 +18,7 @@ import java.util.Calendar;
 public class CharStreamTest {
 
 	/**
-	 * å†™å‡ºåˆ°æ–‡ä»¶ï¼Œå†è¯»å–æ–‡ä»¶å†…å®¹ï¼Œæ˜¾ç¤ºåœ¨æ§åˆ¶å°
+	 * Ğ´³öµ½ÎÄ¼ş£¬ÔÙ¶ÁÈ¡ÎÄ¼şÄÚÈİ£¬ÏÔÊ¾ÔÚ¿ØÖÆÌ¨
 	 * 
 	 * @param args
 	 */
@@ -38,11 +38,11 @@ public class CharStreamTest {
 		File file = new File(fileName);
 		if (file.exists()) {
 			FileInputStream fileInputStream = new FileInputStream(file);
-			InputStreamReader reader = new InputStreamReader(fileInputStream, "UTF-8");// è®¾ç½®ç¼–ç 
+			InputStreamReader reader = new InputStreamReader(fileInputStream, "UTF-8");// ÉèÖÃ±àÂë
 			char[] temp = new char[1024];
 			StringBuilder sb = new StringBuilder();
 			while (reader.read(temp, 0, temp.length) != -1) {
-				System.out.println("è¯»ä¸€æ¬¡");
+				System.out.println("¶ÁÒ»´Î");
 				sb.append(temp);
 			}
 			System.out.println(sb.toString());
@@ -109,7 +109,7 @@ public class CharStreamTest {
 		writer.write(text, 0, text.length());
 		writer.flush();
 		long end = Calendar.getInstance().getTimeInMillis();
-		System.out.println("å†™å…¥æ–‡ä»¶æ€»å…±è€—æ—¶ï¼š" + (end - begin) + "ms");
+		System.out.println("Ğ´ÈëÎÄ¼ş×Ü¹²ºÄÊ±£º" + (end - begin) + "ms");
 		writer.close();
 		outputStream.close();
 	}

@@ -6,7 +6,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- * 字节流 字节流可以处理所有类型数据，如：图片，MP3，AVI 视频文件
+ * 字节流 
+ * 字节流可以处理所有类型数据，如：图片，MP3，AVI 视频文件
  * 
  * @author Administrator
  *

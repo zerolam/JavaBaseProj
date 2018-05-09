@@ -1,5 +1,10 @@
 package com.zerolam.collection;
 
+/**
+ * 用于TestTreeSet的排序程序
+ * @author Administrator
+ *
+ */
 public class Emp {
 	private String name;
 	private int age;
@@ -25,5 +30,4 @@ public class Emp {
 	public String toString() {
 		return "Emp [name=" + name + ", age=" + age + "]";
 	}
-	
 }

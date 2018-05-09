@@ -10,6 +10,7 @@ import java.util.Set;
 
 /**
  * 获取线程安全的集合
+ * 在方法上添加 synchronized 同步锁
  * @author Administrator
  *
  */

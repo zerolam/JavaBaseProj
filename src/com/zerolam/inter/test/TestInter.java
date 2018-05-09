@@ -7,10 +7,16 @@ import com.zerolam.inter.Animal;
 import com.zerolam.inter.impl.Cat;
 import com.zerolam.inter.impl.Dog;
 
+/**
+ * 多态使用案例，以及反射机制的使用
+ * @author Administrator
+ *
+ */
 public class TestInter {
 	
 	public static void main(String[] args) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		Animal animal = new Cat();
+		//Animal animal = new Dog();
 		// 共同的方法
 		System.out.println(animal.eat());
 		System.out.println(animal.getName());
@@ -24,11 +30,12 @@ public class TestInter {
 			c.catShout();
 		}
 		
-		Class clazz = animal.getClass();
+		// 使用反射机制，调用不同类的指定方法
+		Class<? extends Animal> clazz = animal.getClass();
 		if(clazz == Dog.class){
 			System.out.println("===dog===");
-			Method method = clazz.getDeclaredMethod("shout", null);
-			method.invoke(animal, null);
+			Method method = clazz.getDeclaredMethod("shout", new Class[]{});
+			method.invoke(animal, new Object[]{});
 		}else if(clazz == Cat.class){
 			System.out.println("===cat===");
 		}

@@ -4,7 +4,11 @@ import java.util.Comparator;
 import java.util.TreeSet;
 
 import com.zerolam.collection.Emp;
-
+/**
+ * 测试TreeSet的自定义排序
+ * @author Administrator
+ *
+ */
 public class TestTreeSet {
 
 	public static void main(String[] args) {
@@ -18,8 +22,12 @@ public class TestTreeSet {
 	}
 }
 
+/**
+ * 按年龄正序排列（升序排列）
+ * @author Administrator
+ * 
+ */
 class MyComparator implements Comparator<Emp>{
-
 	@Override
 	public int compare(Emp o1, Emp o2) {
 		if(o1.getAge() < o2.getAge()) {
@@ -29,5 +37,4 @@ class MyComparator implements Comparator<Emp>{
 		}
 		return 0;
 	}
-	
 }

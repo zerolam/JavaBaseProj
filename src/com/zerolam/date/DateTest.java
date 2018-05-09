@@ -3,6 +3,12 @@ package com.zerolam.date;
 import java.time.LocalDateTime;
 import java.util.Calendar;
 
+/**
+ * Calendar 和 LocalDateTime 的使用
+ * 获取当前时间
+ * @author Administrator
+ *
+ */
 public class DateTest {
 	
 	public static void main(String[] args) {
